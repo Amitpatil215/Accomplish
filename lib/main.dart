@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:test_todo/logic.dart';
+import './logic.dart';
 
-import 'package:test_todo/model.dart';
+import './model.dart';
 
 void main() {
   runApp(MyApp());
@@ -57,8 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
-        title: Text("Todo App"),
+        title: Text("Accomplish"),
       ),
       body: StreamBuilder<List<Todo>>(
           stream: _logic.streamController.stream,
@@ -117,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
     if (!snapshot.hasData || snapshot.data.length == 0) {
       return [
         Flexible(
-          child: CircularProgressIndicator(),
+          child: Text("Added to do show up here"),
         ),
       ];
     } else {

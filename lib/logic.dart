@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:test_todo/model.dart';
+import './model.dart';
 
 class TodoLogic {
   List<Todo> list = [];

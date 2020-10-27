@@ -1,7 +1,7 @@
 import 'package:test/test.dart';
 
-import 'package:test_todo/logic.dart';
-import 'package:test_todo/model.dart';
+import '../lib/logic.dart';
+import '../lib/model.dart';
 
 void main() {
   TodoLogic todoLogic;

@@ -112,7 +112,10 @@ class _MyHomePageState extends State<MyHomePage> {
     if (!snapshot.hasData || snapshot.data.length == 0) {
       return [
         Flexible(
-          child: Text("Added to do show up here"),
+          child: Text(
+            "Added to do show up here",
+            key: Key("empty-todo"),
+          ),
         ),
       ];
     } else {

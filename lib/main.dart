@@ -8,10 +8,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  final List<Todo> todoList;
-
-  const MyApp({Key key, this.todoList}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -68,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Expanded(
                     child: TextField(
                   key: Key('todo-field'),
-                  autofocus: true,
+                  autofocus: false,
                   controller: _textEditingController,
                 )),
                 ...showTodos(snapshot),
